@@ -5,55 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Concordia Spa & Wellness</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<!-- Tipografías elegantes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-body,html{
-font-family:'Inter', sans-serif;
-background:black;
-color:white;
-overflow-x:hidden;
+body{
+font-family:'Montserrat', sans-serif;
+background:white;
+color:#111;
 }
 
-/* HEADER BLANCO ANGOSTO */
+/* HEADER MÁS DELGADO */
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
 background:white;
 text-align:center;
-padding:12px 0 6px 0;
-z-index:1000;
+padding:10px 0 5px 0;
+border-bottom:1px solid #eee;
 }
 
 header img{
-width:170px;
+width:140px;
+margin-bottom:3px;
 }
 
-.lema{
-font-family:'Playfair Display', serif;
-font-size:14px;
+header p{
+font-size:11px;
 letter-spacing:4px;
-color:black;
-margin-top:4px;
+color:#777;
 }
 
 /* HERO VIDEO */
 .hero{
-margin-top:90px;
 position:relative;
 height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
 overflow:hidden;
 }
 
@@ -61,138 +52,128 @@ overflow:hidden;
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(-50%, -50%);
 min-width:100%;
 min-height:100%;
+transform:translate(-50%,-50%);
 object-fit:cover;
-z-index:1;
-filter:brightness(0.55) contrast(1.1) saturate(1.2);
+z-index:-1;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:900px;
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.5));
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
 padding:20px;
 }
 
+/* TÍTULO MÁS ELEGANTE */
 .hero h1{
 font-family:'Playfair Display', serif;
-font-size:60px;
-letter-spacing:4px;
-text-transform:uppercase;
+font-size:34px;
+font-weight:500;
+letter-spacing:3px;
+color:white;
 margin-bottom:15px;
 }
 
-.subtitle{
-font-size:20px;
+/* SUBTÍTULO MÁS PEQUEÑO */
+.hero h2{
+font-size:14px;
+font-weight:300;
 letter-spacing:2px;
-opacity:0.95;
+color:#f2f2f2;
 margin-bottom:35px;
 }
 
-/* BOTONES */
-.btn{
+/* BOTONES METÁLICOS FINOS */
+.button{
 display:inline-block;
-margin:10px;
-padding:16px 45px;
-border:1px solid white;
-color:white;
+padding:10px 28px;
+margin:6px;
+font-size:12px;
+letter-spacing:2px;
 text-decoration:none;
-letter-spacing:1px;
-font-size:14px;
-transition:0.4s ease;
+transition:0.3s;
 }
 
-.btn-primary{
-background:white;
+/* Botón dorado metálico */
+.gold{
+background:linear-gradient(145deg,#d4af37,#f8e7a1,#b8902e);
 color:black;
-font-weight:500;
+border:none;
 }
 
-.btn-primary:hover{
-background:#eaeaea;
-}
-
-.btn-outline:hover{
-background:white;
-color:black;
-}
-
-/* SECCIÓN SERVICIOS */
-section{
-padding:100px 20px;
-text-align:center;
-background:black;
-}
-
-section h2{
-font-family:'Playfair Display', serif;
-font-size:34px;
-letter-spacing:3px;
-margin-bottom:25px;
-}
-
-section p{
-max-width:800px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
+.gold:hover{
 opacity:0.85;
 }
 
-/* FOOTER */
-footer{
-padding:60px 20px;
-text-align:center;
-border-top:1px solid rgba(255,255,255,0.1);
-font-size:14px;
-opacity:0.6;
+/* Botón blanco con borde dorado */
+.outline{
+border:1px solid #d4af37;
+color:white;
+background:transparent;
 }
+
+.outline:hover{
+background:#d4af37;
+color:black;
+}
+
+.secondary{
+margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{
+font-size:26px;
+}
+.hero h2{
+font-size:12px;
+}
+.button{
+padding:8px 20px;
+font-size:11px;
+}
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="logo-concordia.png" alt="Concordia Spa Logo">
-<div class="lema">VIVE EN ARMONÍA</div>
+<img src="logo-concordia.png" alt="Concordia Logo">
+<p>VIVE EN ARMONÍA</p>
 </header>
 
-<div class="hero">
+<section class="hero">
 <video autoplay muted loop playsinline>
-  <source src="https://cdn.coverr.co/videos/coverr-sunlight-through-flowing-water-6994/1080p.mp4" type="video/mp4">
+<source src="https://cdn.coverr.co/videos/coverr-woman-relaxing-in-water-5588/1080p.mp4" type="video/mp4">
 </video>
 
-<div class="hero-content">
+<div class="overlay">
 <h1>Biohacking de Longevidad</h1>
-<p class="subtitle">Reset total de cuerpo, mente y energía.</p>
+<h2>Reset total de cuerpo, mente y energía.</h2>
 
-<a class="btn btn-primary" href="https://wa.me/528342991603" target="_blank">Reservar Ahora</a>
+<a href="#" class="button gold">RESERVAR</a>
 
-<a class="btn btn-outline" href="contacto.html">Enviar Mensaje</a>
-
-<a class="btn btn-outline" href="suscripcion.html">Suscribirme</a>
-
-<a class="btn btn-outline" href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" target="_blank">Ver Menú Completo</a>
-
-</div>
+<div class="secondary">
+<a href="contacto.html" class="button outline">ENVIAR MENSAJE</a>
+<a href="suscripcion.html" class="button outline">SUSCRIBIRME</a>
+<a href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view" target="_blank" class="button outline">VER MENÚ</a>
 </div>
 
-<section>
-<h2>Experiencias de Bienestar Integral</h2>
-<p>
-Biohacking · Neuromeditación · Longevidad avanzada · Masajes corporales ·
-Sonidoterapia · Armonización energética · Aromaterapia · Hidroterapia ·
-Faciales con péptidos, exosomas y PDRN · Nutrición funcional · Energy Boost ·
-Optimización de sueño · Manejo de estrés y ansiedad.
-</p>
+</div>
 </section>
-
-<footer>
-<p>Contacto: contacto@concordiaspawellness.com</p>
-<p>© 2026 Concordia Spa & Wellness</p>
-</footer>
 
 </body>
 </html>
