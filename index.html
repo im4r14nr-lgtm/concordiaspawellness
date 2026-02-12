@@ -1,78 +1,112 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concordia Spa & Wellness | Vive en Armonía</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Concordia Spa & Wellness | Vive en armonía</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #000000, #0f2027, #001f1f);
-    color: #ffffff;
-    text-align: center;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0c0c0c;
+  color: #f5f5f5;
 }
 
 header {
-    padding: 80px 20px;
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #c6a76e;
+  margin-bottom: 25px;
 }
 
 h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 42px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0 0 20px;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #9efff2;
-    margin-bottom: 40px;
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 35px;
+  border: 1px solid #c6a76e;
+  color: #c6a76e;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c6a76e;
+  color: #0c0c0c;
 }
 
 .section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(0,255,200,0.2);
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px 0;
-    backdrop-filter: blur(10px);
-    transition: 0.3s ease;
+  background: #141414;
+  padding: 30px;
+  border: 1px solid #1f1f1f;
+  transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    border-color: #00ffe0;
+  border: 1px solid #c6a76e;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
-    border-radius: 40px;
-    background: linear-gradient(90deg, #00ffe0, #00c3ff);
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.button:hover {
-    opacity: 0.8;
+.price {
+  color: #c6a76e;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 footer {
-    padding: 40px 20px;
-    font-size: 14px;
-    color: #9efff2;
+  text-align: center;
+  padding: 60px 20px;
+  background: #090909;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 </style>
@@ -81,42 +115,52 @@ footer {
 <body>
 
 <header>
-<h1>CONCORDIA SPA & WELLNESS</h1>
-<div class="subtitle">NeuroWellness • BioTech Beauty • Longevity Studio</div>
-<a href="mailto:contacto@concordiaspawellness.com" class="button">Reservar Experiencia</a>
+  <img src="logo-concordia.png" alt="Concordia Spa & Wellness" class="logo">
+  <div class="tagline">Vive en armonía.</div>
+  <h1>Neuro Wellness & Longevidad</h1>
+  <p class="hero-text">
+    Experiencias privadas diseñadas para elevar tu energía, belleza y equilibrio.
+    Un santuario moderno en Monterrey enfocado en biohacking, neuro bienestar y estética avanzada.
+  </p>
+  <a href="#servicios" class="btn">Descubrir experiencias</a>
 </header>
 
-<div class="section">
-<h2>Un Nuevo Estándar de Bienestar</h2>
-<p>
-Fusionamos ciencia, tecnología y armonización energética para ofrecer experiencias exclusivas enfocadas en belleza, neuroequilibrio y longevidad.
-</p>
+<section class="section" id="servicios">
+  <h2>Experiencias Signature</h2>
 
-<div class="card">
-<h3>BioHacking Longevity</h3>
-<p>Masaje + Facial BioTech + Hydro + Berry Bowl + NeuroMeditación</p>
-<p><strong>$5,999 MXN</strong></p>
-</div>
+  <div class="services">
 
-<div class="card">
-<h3>Neuro Wellness Reset</h3>
-<p>Masaje + NeuroMeditación + Té funcional</p>
-<p><strong>$2,222 MXN</strong></p>
-</div>
+    <div class="card">
+      <h3>Ritual Concordia</h3>
+      <p>Masaje · Hydro · Facial BioTech · Bebida funcional</p>
+      <div class="price">$1,299</div>
+    </div>
 
-<div class="card">
-<h3>Pilates Flow</h3>
-<p>Movimiento inteligente para fuerza profunda y longevidad</p>
-<p><strong>8 clases $2,999 MXN</strong></p>
-</div>
+    <div class="card">
+      <h3>Neuro Wellness Reset</h3>
+      <p>Masaje · NeuroMeditación · Té herbal</p>
+      <div class="price">$2,222</div>
+    </div>
 
-</div>
+    <div class="card">
+      <h3>BioHacking Longevity</h3>
+      <p>Masaje · Facial BioTech · Hydro · Berry Bowl · Neuro Armonización</p>
+      <div class="price">$5,999</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Ubicación</h2>
+  <p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
+  <p>Lunes a Viernes 10:30 am – 7:30 pm | Sábado 10:30 am – 2:30 pm</p>
+  <p>Contacto: contacto@concordiaspawellness.com</p>
+</section>
 
 <footer>
-Río Nazas 605, Privada Roma, Monterrey, N.L. <br>
-L-V 10:30 am - 7:30 pm | Sáb 10:30 am - 2:30 pm <br>
-contacto@concordiaspawellness.com
+  © 2026 Concordia Spa & Wellness — Todos los derechos reservados
 </footer>
 
 </body>
-</html>html
+</html>
