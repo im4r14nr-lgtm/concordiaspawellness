@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --gold:#C6A75E;
   --black:#000000;
@@ -18,205 +19,245 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
 body{
   font-family:'Montserrat', sans-serif;
-  background-color:var(--black);
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
   color:var(--white);
-  line-height:1.6;
+  overflow-x:hidden;
 }
 
 h1,h2,h3{
   font-family:'Cormorant Garamond', serif;
-  letter-spacing:1px;
+  letter-spacing:2px;
 }
 
+/* HEADER BLANCO */
 header{
   background:var(--white);
   text-align:center;
-  padding:40px 20px;
+  padding:60px 20px 50px 20px;
 }
 
 header img{
-  max-width:200px;
+  max-width:260px;
 }
 
 .tagline{
-  font-family:'Cormorant Garamond', serif;
-  font-size:24px;
-  color:var(--black);
-  margin-top:10px;
-  letter-spacing:2px;
+  font-size:26px;
+  color:#000;
+  letter-spacing:4px;
+  margin-top:20px;
 }
 
 .btn{
   display:inline-block;
-  padding:14px 30px;
-  margin-top:20px;
+  padding:14px 38px;
+  margin-top:25px;
   border:1px solid var(--gold);
   color:var(--gold);
   text-decoration:none;
-  font-size:14px;
-  letter-spacing:2px;
-  transition:0.3s;
+  font-size:13px;
+  letter-spacing:3px;
+  transition:0.4s;
 }
 
 .btn:hover{
   background:var(--gold);
-  color:var(--black);
+  color:#000;
+  box-shadow:0 0 20px rgba(198,167,94,0.6);
 }
 
-section{
-  padding:80px 10%;
+/* HERO */
+.hero{
+  padding:120px 10%;
   text-align:center;
 }
 
-.hero{
-  background:var(--black);
-}
-
 .hero h1{
-  font-size:48px;
-  margin-bottom:20px;
+  font-size:52px;
+  margin-bottom:25px;
 }
 
 .hero p{
-  max-width:700px;
-  margin:0 auto 30px;
+  max-width:750px;
+  margin:0 auto 35px;
   font-weight:300;
+  font-size:18px;
+  opacity:0.9;
 }
 
 .gold{
   color:var(--gold);
 }
 
+section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+/* SERVICES GRID */
 .services{
-  text-align:left;
-  max-width:900px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:40px;
+  max-width:1000px;
   margin:auto;
 }
 
 .service{
-  margin-bottom:40px;
-  border-bottom:1px solid #222;
-  padding-bottom:30px;
+  padding:40px;
+  border:1px solid rgba(198,167,94,0.25);
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.03);
+  transition:0.4s;
+}
+
+.service:hover{
+  border-color:var(--gold);
+  box-shadow:0 0 25px rgba(198,167,94,0.2);
 }
 
 footer{
-  background:#111;
+  background:#0a0a0a;
   text-align:center;
-  padding:40px 20px;
+  padding:50px 20px;
   font-size:14px;
+  letter-spacing:2px;
 }
 
-a{
-  color:var(--gold);
-  text-decoration:none;
+/* WhatsApp Floating */
+.whatsapp-float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:30px;
+  right:30px;
+  background-color:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+  z-index:1000;
+  transition:0.3s;
 }
 
-.map-btn{
-  margin-top:15px;
-  display:inline-block;
+.whatsapp-float:hover{
+  transform:scale(1.1);
 }
+
+.whatsapp-float img{
+  width:32px;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:38px;
+  }
+  section{
+    padding:70px 8%;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <img src="logo.png" alt="Concordia Spa & Wellness Logo">
+  <img src="logo-concordia.png" alt="Concordia Spa & Wellness Logo">
   <div class="tagline">VIVE EN ARMONÍA</div>
   <a href="https://wa.me/528342991603" class="btn">RESERVA AHORA</a>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Concordia Spa & Wellness</h1>
+  <h1>Concordia <span class="gold">Spa & Wellness</span></h1>
   <p>
-  Donde la ciencia avanzada, la energía y el lujo futurista se encuentran.
-  Biohacking, Neurowellness y tecnología facial con PDRN, péptidos y exosomas.
-  Diseñado para transformar cuerpo, mente y espíritu.
+  Un santuario de lujo futurista donde la ciencia avanzada, la NeuroMeditación
+  y el Biohacking se integran para transformar cuerpo, mente y energía.
+  Tecnología facial con PDRN, péptidos y exosomas.
+  Bienestar integral basado en innovación real.
   </p>
-  <a href="https://wa.me/528342991603" class="btn">AGENDAR POR WHATSAPP</a>
-  <br>
-  <a href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" class="btn map-btn">VER UBICACIÓN</a>
+  <a href="https://wa.me/528342991603" class="btn">AGENDAR EXPERIENCIA</a>
 </section>
 
+<!-- SERVICIOS GENERALES -->
 <section>
-  <h2 class="gold">Nuestros Protocolos Premium</h2>
+  <h2 class="gold">Experiencias & Protocolos</h2>
+
   <div class="services">
 
     <div class="service">
-      <h3>BioHacking Longevity — $5,999</h3>
-      <p>
-      Masaje corporal, Facial BioTech con PDRN + Exosomas + Péptidos,
-      Hidroterapia, Berry Bowl funcional, Té especial, NeuroMeditación y
-      Armonización energética. Rejuvenecimiento celular profundo.
-      </p>
+      <h3>Biohacking Longevity</h3>
+      <p>Protocolos avanzados para regeneración celular y rejuvenecimiento integral.</p>
     </div>
 
     <div class="service">
-      <h3>NeuroWellness Reset — $2,222</h3>
-      <p>
-      Masaje terapéutico + NeuroMeditación guiada + Té funcional.
-      Regulación del sistema nervioso, mejora del sueño y reducción de ansiedad.
-      </p>
+      <h3>NeuroWellness & NeuroMeditación</h3>
+      <p>Regulación del sistema nervioso, reducción de ansiedad y optimización mental.</p>
     </div>
 
     <div class="service">
-      <h3>Ritual Concordia — $1,299</h3>
-      <p>
-      Masaje + Hidroterapia + Facial BioTech + Bebida funcional.
-      Equilibrio físico, mental y energético.
-      </p>
+      <h3>Faciales BioTech Avanzados</h3>
+      <p>PDRN, péptidos y exosomas para máxima calidad de piel.</p>
     </div>
 
     <div class="service">
-      <h3>GlowUp Experience — $5,900</h3>
-      <p>
-      12 clases de Pilates + Facial BioTech + Smoothie + Colágeno.
-      Transformación integral cuerpo y piel.
-      </p>
+      <h3>Masajes Corporales & Hidroterapia</h3>
+      <p>Equilibrio profundo cuerpo-mente-energía.</p>
     </div>
 
     <div class="service">
-      <h3>Recovery Program — $4,900</h3>
-      <p>
-      2 Masajes + 2 Hidros + 2 Smoothies + proteína.
-      Ideal para alto rendimiento y recuperación muscular.
-      </p>
+      <h3>Wellness Bar Funcional</h3>
+      <p>Smoothies verdes, bowls nutritivos y energía consciente.</p>
+    </div>
+
+    <div class="service">
+      <h3>Armonización Energética</h3>
+      <p>Sonidoterapia, aromaterapia y balance espiritual.</p>
     </div>
 
   </div>
+
+  <a href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" 
+     class="btn" target="_blank">
+     VER MENÚ COMPLETO
+  </a>
 </section>
 
-<section>
-  <h2 class="gold">Wellness Bar</h2>
-  <p>
-  Smoothies funcionales, bowls nutritivos, infusiones, café premium y suplementos.
-  Energía sostenible y nutrición inteligente.
-  </p>
-</section>
-
+<!-- UBICACIÓN -->
 <section>
   <h2 class="gold">Ubicación</h2>
   <p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
-  <a href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" class="btn">CÓMO LLEGAR</a>
+  <a href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" class="btn">
+  CÓMO LLEGAR
+  </a>
 </section>
 
+<!-- CONTACTO -->
 <section>
   <h2 class="gold">Contacto</h2>
   <p>
-  WhatsApp: <a href="https://wa.me/528342991603">834 299 1603</a><br>
-  Email: <a href="mailto:contacto@concordiaspawellness.com">contacto@concordiaspawellness.com</a>
+  WhatsApp: 834 299 1603<br>
+  contacto@concordiaspawellness.com
   </p>
   <a href="https://wa.me/528342991603" class="btn">RESERVA AHORA</a>
 </section>
 
 <footer>
-  <p>Concordia Spa & Wellness</p>
-  <p class="gold">Vive en armonía</p>
+  Concordia Spa & Wellness<br>
+  <span class="gold">Vive en armonía</span>
 </footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/528342991603" class="whatsapp-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
 
 </body>
 </html>
