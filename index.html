@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Concordia Spa & Wellness</title>
 
-<!-- Tipografías elegantes -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -18,30 +16,30 @@ box-sizing:border-box;
 
 body{
 font-family:'Montserrat', sans-serif;
-background:white;
+background:linear-gradient(to bottom,#f4f4f4,#e8e8e8,#f7f7f7);
 color:#111;
 }
 
-/* HEADER MÁS DELGADO */
+/* HEADER */
 header{
 background:white;
 text-align:center;
-padding:10px 0 5px 0;
-border-bottom:1px solid #eee;
+padding:8px 0 4px 0;
+border-bottom:1px solid #ddd;
 }
 
 header img{
-width:140px;
-margin-bottom:3px;
+width:130px;
+margin-bottom:2px;
 }
 
 header p{
-font-size:11px;
+font-size:10px;
 letter-spacing:4px;
-color:#777;
+color:#000;
 }
 
-/* HERO VIDEO */
+/* HERO */
 .hero{
 position:relative;
 height:100vh;
@@ -56,16 +54,17 @@ min-width:100%;
 min-height:100%;
 transform:translate(-50%,-50%);
 object-fit:cover;
-z-index:-1;
+z-index:-2;
 }
 
+/* Overlay elegante */
 .overlay{
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.5));
+background:linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(0,0,0,0.3));
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -74,77 +73,74 @@ text-align:center;
 padding:20px;
 }
 
-/* TÍTULO MÁS ELEGANTE */
+/* TITULO */
 .hero h1{
 font-family:'Playfair Display', serif;
-font-size:34px;
+font-size:30px;
 font-weight:500;
 letter-spacing:3px;
-color:white;
-margin-bottom:15px;
+color:black;
+margin-bottom:20px;
+max-width:750px;
 }
 
-/* SUBTÍTULO MÁS PEQUEÑO */
-.hero h2{
-font-size:14px;
-font-weight:300;
-letter-spacing:2px;
-color:#f2f2f2;
-margin-bottom:35px;
-}
-
-/* BOTONES METÁLICOS FINOS */
+/* BOTONES */
 .button{
 display:inline-block;
-padding:10px 28px;
+padding:10px 30px;
 margin:6px;
 font-size:12px;
 letter-spacing:2px;
 text-decoration:none;
+background:black;
+color:white;
 transition:0.3s;
 }
 
-/* Botón dorado metálico */
-.gold{
-background:linear-gradient(145deg,#d4af37,#f8e7a1,#b8902e);
-color:black;
-border:none;
+.button:hover{
+background:#333;
 }
 
-.gold:hover{
-opacity:0.85;
-}
-
-/* Botón blanco con borde dorado */
-.outline{
-border:1px solid #d4af37;
-color:white;
-background:transparent;
-}
-
-.outline:hover{
+/* DETALLE ORO */
+.gold-line{
+width:60px;
+height:2px;
 background:#d4af37;
-color:black;
+margin:20px auto;
 }
 
-.secondary{
-margin-top:10px;
+/* SERVICIOS */
+.services{
+background:linear-gradient(to bottom,#ffffff,#ececec);
+padding:70px 20px;
+text-align:center;
+}
+
+.services h2{
+font-family:'Playfair Display', serif;
+font-size:22px;
+letter-spacing:2px;
+margin-bottom:25px;
+}
+
+.services p{
+max-width:900px;
+margin:auto;
+font-size:14px;
+line-height:1.8;
+color:#333;
 }
 
 /* RESPONSIVE */
 @media(max-width:768px){
 .hero h1{
-font-size:26px;
-}
-.hero h2{
-font-size:12px;
+font-size:22px;
 }
 .button{
 padding:8px 20px;
 font-size:11px;
 }
 }
-
 </style>
 </head>
 
@@ -157,22 +153,33 @@ font-size:11px;
 
 <section class="hero">
 <video autoplay muted loop playsinline>
-<source src="https://cdn.coverr.co/videos/coverr-woman-relaxing-in-water-5588/1080p.mp4" type="video/mp4">
+<source src="hero.mp4" type="video/mp4">
 </video>
 
 <div class="overlay">
-<h1>Biohacking de Longevidad</h1>
-<h2>Reset total de cuerpo, mente y energía.</h2>
+<h1>Biohacking de longevidad para un reset total de cuerpo, mente y energía.</h1>
 
-<a href="#" class="button gold">RESERVAR</a>
+<div class="gold-line"></div>
 
-<div class="secondary">
-<a href="contacto.html" class="button outline">ENVIAR MENSAJE</a>
-<a href="suscripcion.html" class="button outline">SUSCRIBIRME</a>
-<a href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view" target="_blank" class="button outline">VER MENÚ</a>
-</div>
+<a href="https://wa.me/528342991603" class="button">RESERVAR</a>
+<a href="contacto.html" class="button">ENVIAR MENSAJE</a>
+<a href="suscripcion.html" class="button">SUSCRIBIRME</a>
+<a href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view" target="_blank" class="button">VER MENÚ</a>
 
 </div>
+</section>
+
+<section class="services">
+<h2>NUESTROS SERVICIOS</h2>
+
+<p>
+Biohacking · Neuromeditación · Longevidad avanzada · Masajes corporales ·
+Sonidoterapia · Armonización energética · Aromaterapia · Hidroterapia ·
+Faciales Biotech (péptidos, exosomas y PDRN) · Nutrición Green · Energy Boost ·
+Optimización de sueño · Mejorar estrés y ansiedad · Reduce cintura ·
+Abdomen firme · Pilates · Ilumina tu rostro · Lifting sin cirugía.
+</p>
+
 </section>
 
 </body>
