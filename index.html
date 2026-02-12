@@ -5,47 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Concordia Spa & Wellness</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
+margin:0;
 font-family:'Inter', sans-serif;
-background:black;
+background:#000;
 color:white;
 overflow-x:hidden;
 }
 
-/* HEADER */
-
+/* HEADER FIJO BLANCO */
 header{
 position:fixed;
-width:100%;
 top:0;
 left:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
-padding:15px 0;
+width:100%;
+background:white;
 text-align:center;
+padding:20px 0 10px 0;
 z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 header img{
-width:180px;
-animation:fadeIn 2s ease forwards;
-opacity:0;
+width:200px;
+}
+
+.lema{
+font-family:'Playfair Display', serif;
+font-size:18px;
+letter-spacing:4px;
+color:black;
+margin-top:8px;
 }
 
 /* HERO */
-
 .hero{
-height:100vh;
+margin-top:140px; /* espacio para que no se empalme */
+height:85vh;
 background:url('https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
 display:flex;
 align-items:center;
@@ -61,111 +61,82 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.45);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:800px;
+max-width:750px;
 padding:20px;
-animation:fadeUp 2s ease forwards;
-opacity:0;
 }
 
 .hero h1{
 font-family:'Playfair Display', serif;
-font-size:60px;
-letter-spacing:4px;
+font-size:44px;
+letter-spacing:3px;
 margin-bottom:25px;
 }
 
 .hero p{
-font-size:20px;
 line-height:1.8;
+font-size:18px;
 opacity:0.9;
 }
 
-/* BUTTONS */
-
+/* BOTONES */
 .buttons{
 margin-top:40px;
 }
 
 .btn{
-display:inline-block;
-margin:12px;
-padding:18px 55px;
-border:1px solid white;
-color:white;
+display:block;
+width:250px;
+margin:15px auto;
+padding:16px;
 text-decoration:none;
 letter-spacing:1px;
-transition:all 0.4s ease;
+transition:0.4s;
+font-size:15px;
 }
 
 .btn-primary{
 background:white;
 color:black;
-font-weight:500;
 }
 
-.btn:hover{
-transform:translateY(-3px);
+.btn-primary:hover{
+background:#ddd;
 }
 
-/* SECTIONS */
+.btn-outline{
+border:1px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:black;
+}
 
 section{
-padding:120px 20px;
+padding:100px 20px;
 text-align:center;
-background:black;
 }
 
 h2{
 font-family:'Playfair Display', serif;
-font-size:36px;
-letter-spacing:3px;
-margin-bottom:25px;
-}
-
-.gold-line{
-width:70px;
-height:2px;
-background:linear-gradient(to right, transparent, #d4af37, transparent);
-margin:30px auto;
-}
-
-p{
-max-width:750px;
-margin:auto;
-line-height:1.9;
-opacity:0.85;
-font-size:18px;
+font-size:32px;
+letter-spacing:2px;
+margin-bottom:20px;
 }
 
 footer{
 padding:60px 20px;
-border-top:1px solid rgba(255,255,255,0.1);
+border-top:1px solid #1a1a1a;
 text-align:center;
 opacity:0.6;
 font-size:14px;
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeIn{
-to{opacity:1;}
-}
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.hero-content{
-transform:translateY(40px);
 }
 
 </style>
@@ -174,56 +145,31 @@ transform:translateY(40px);
 <body>
 
 <header>
-<img src="logo-concordia.png" alt="Concordia Spa Logo">
+<img src="logo-concordia.png" alt="Concordia Logo">
+<div class="lema">VIVE EN ARMONÍA</div>
 </header>
 
-<section class="hero">
+<div class="hero">
 <div class="hero-content">
-<h1>VIVE EN ARMONÍA</h1>
+<h1>Biohacking · Neuromeditación · Longevidad</h1>
 <p>
-Biohacking · Neuromeditación · Longevidad avanzada.  
 Un santuario diseñado para elevar tu energía, equilibrio mental y bienestar integral.
 </p>
 
 <div class="buttons">
 <a class="btn btn-primary" href="https://wa.me/528342991603" target="_blank">Reservar Ahora</a>
-<a class="btn" href="contacto.html">Enviar Mensaje</a>
-<a class="btn" href="suscripcion.html">Suscribirme</a>
+<a class="btn btn-outline" href="contacto.html">Enviar Mensaje</a>
+<a class="btn btn-outline" href="suscripcion.html">Suscribirme</a>
 </div>
-
 </div>
-</section>
+</div>
 
 <section>
 <h2>Experiencias Transformadoras</h2>
-<div class="gold-line"></div>
 <p>
-Masajes corporales · Neurowellness · Sonidoterapia ·  
-Armonización energética · Aromaterapia · Hidroterapia ·  
-Faciales con péptidos, exosomas y PDRN · Nutrición funcional · Energy Boost.
+Masajes corporales · Neurowellness · Sonidoterapia · Armonización energética ·
+Faciales avanzados · Nutrición funcional · Energy Boost.
 </p>
-
-<div class="buttons">
-<a class="btn" 
-href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" 
-target="_blank">
-Ver Menú Completo
-</a>
-</div>
-</section>
-
-<section>
-<h2>Ubicación</h2>
-<div class="gold-line"></div>
-<p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
-
-<div class="buttons">
-<a class="btn" 
-href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" 
-target="_blank">
-Abrir en Google Maps
-</a>
-</div>
 </section>
 
 <footer>
