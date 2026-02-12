@@ -5,38 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Concordia Spa & Wellness</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
+
 body{
 margin:0;
 background:black;
 color:white;
-font-family:'Helvetica Neue', sans-serif;
-text-align:center;
+font-family:'Inter', sans-serif;
+overflow-x:hidden;
 }
 
 header{
 background:white;
 padding:25px 0;
+text-align:center;
 }
 
 header img{
 width:220px;
 }
 
-.hero{
-padding:100px 20px 60px 20px;
+section{
+padding:120px 20px;
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:all 1.2s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h1, h2{
+font-family:'Playfair Display', serif;
+letter-spacing:3px;
 }
 
 h1{
-font-size:42px;
-letter-spacing:3px;
-margin-bottom:20px;
+font-size:48px;
+margin-bottom:25px;
+}
+
+h2{
+font-size:32px;
+margin-bottom:25px;
 }
 
 p{
 max-width:750px;
 margin:auto;
-line-height:1.7;
+line-height:1.8;
 opacity:0.85;
 font-size:18px;
 }
@@ -48,12 +70,14 @@ margin-top:40px;
 .btn{
 display:inline-block;
 margin:12px;
-padding:15px 40px;
+padding:16px 45px;
 border:1px solid white;
 color:white;
 text-decoration:none;
-transition:0.3s;
 letter-spacing:1px;
+transition:all 0.4s ease;
+position:relative;
+overflow:hidden;
 }
 
 .btn:hover{
@@ -61,17 +85,14 @@ background:white;
 color:black;
 }
 
-.section{
-padding:70px 20px;
+footer{
+padding:60px 20px;
 border-top:1px solid #1a1a1a;
+text-align:center;
+opacity:0.6;
+font-size:14px;
 }
 
-footer{
-padding:40px 20px;
-border-top:1px solid #1a1a1a;
-font-size:14px;
-opacity:0.6;
-}
 </style>
 </head>
 
@@ -81,12 +102,12 @@ opacity:0.6;
 <img src="logo-concordia.png" alt="Concordia Spa Logo">
 </header>
 
-<section class="hero">
+<section>
 <h1>VIVE EN ARMONÍA</h1>
 
 <p>
-Un santuario de biohacking y neuromeditación avanzada.  
-Tecnología de longevidad, wellness integral y experiencias diseñadas para equilibrar cuerpo, mente y energía.
+Un santuario de biohacking, neuromeditación y longevidad avanzada.  
+Experiencias diseñadas para optimizar tu energía, equilibrio mental y bienestar integral.
 </p>
 
 <div class="buttons">
@@ -94,43 +115,57 @@ Tecnología de longevidad, wellness integral y experiencias diseñadas para equi
 <a class="btn" href="contacto.html">Enviar Mensaje</a>
 <a class="btn" href="suscripcion.html">Suscribirme</a>
 </div>
-
 </section>
 
-<section class="section">
-<h2>Experiencias</h2>
+<section>
+<h2>Experiencias Transformadoras</h2>
 <p>
 Masajes corporales · Neurowellness · Sonidoterapia ·  
 Armonización energética · Aromaterapia · Hidroterapia ·  
 Faciales con péptidos, exosomas y PDRN · Nutrición funcional · Energy Boost.
 </p>
 
-<br>
-
+<div class="buttons">
 <a class="btn" 
 href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" 
 target="_blank">
 Ver Menú Completo
 </a>
-
+</div>
 </section>
 
-<section class="section">
+<section>
 <h2>Ubicación</h2>
 <p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
 
+<div class="buttons">
 <a class="btn" 
 href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" 
 target="_blank">
 Abrir en Google Maps
 </a>
-
+</div>
 </section>
 
 <footer>
-<p>Contacto: contacto@concordiaspawellness.com</p>
+<p>contacto@concordiaspawellness.com</p>
 <p>© 2026 Concordia Spa & Wellness</p>
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(section => {
+const position = section.getBoundingClientRect().top;
+const screenPosition = window.innerHeight / 1.3;
+
+if(position < screenPosition){
+section.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
