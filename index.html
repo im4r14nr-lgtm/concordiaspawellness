@@ -11,20 +11,21 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0c0c0c;
-  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 33vh,
+    #000000 33vh,
+    #000000 100%
+  );
 }
 
-header {
-  text-align: center;
-  padding: 80px 20px 60px;
-}
-
-.logo {
-  width: 160px;
-  margin-bottom: 20px;
-}
+<header class="header">
+    <img src="logo-concordia.png" alt="Concordia Spa & Wellness" class="logo">
+    <h1>Concordia Spa & Wellness Center</h1>
+    <p class="tagline">Vive en armonía</p>
+</header
 
 .tagline {
   font-family: 'Playfair Display', serif;
@@ -33,7 +34,31 @@ header {
   color: #c6a76e;
   margin-bottom: 25px;
 }
+.header {
+  height: 33vh;              /* ocupa el tercio blanco */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centra verticalmente */
+  align-items: center;       /* centra horizontalmente */
+  text-align: center;
+  color: #000;
+}
 
+.logo {
+  width: 160px;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.tagline {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #c6a76e; /* dorado elegante opcional */
+}
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
