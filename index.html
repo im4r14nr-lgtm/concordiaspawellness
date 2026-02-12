@@ -13,42 +13,54 @@ body{
     color:#fff;
 }
 
-/* ===== Banner Blanco ===== */
+/* ===== Banner blanco con logo ===== */
 .banner{
     background:#fff;
-    height:32vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    padding:50px 20px 40px;
     text-align:center;
 }
 
 .logo{
     width:180px;
-    animation:fadeIn 1.5s ease;
+    max-width:75%;
 }
 
 .lema{
-    margin-top:10px;
+    margin-top:15px;
     color:#bfa46f;
     font-size:18px;
     letter-spacing:3px;
 }
 
-/* ===== Botón principal ===== */
-.cta{
-    margin-top:20px;
-    background:#000;
-    color:#fff;
-    padding:12px 28px;
-    border:1px solid #bfa46f;
+/* Botones principales */
+.buttons{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.btn{
+    padding:12px 24px;
     text-decoration:none;
+    border:1px solid #bfa46f;
     letter-spacing:2px;
+    font-size:14px;
     transition:0.3s;
 }
 
-.cta:hover{
+.btn.dark{
+    background:#000;
+    color:#fff;
+}
+
+.btn.light{
+    background:#fff;
+    color:#000;
+}
+
+.btn:hover{
     background:#bfa46f;
     color:#000;
 }
@@ -62,30 +74,41 @@ body{
 
 .title{
     text-align:center;
-    font-size:28px;
+    font-size:26px;
     letter-spacing:4px;
-    margin-bottom:50px;
+    margin-bottom:40px;
     color:#bfa46f;
 }
 
-/* ===== Tarjetas ===== */
+/* Texto editorial futurista */
+.editorial{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 60px;
+    line-height:1.9;
+    color:#ddd;
+    font-size:17px;
+}
+
+/* Servicios / experiencias */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:25px;
+    grid-template-columns:1fr;
+    gap:20px;
 }
 
 .card{
     background:#0a0a0a;
     border:1px solid #1a1a1a;
-    padding:35px;
+    padding:30px;
     text-align:center;
     transition:0.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
     border-color:#bfa46f;
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(191,164,111,0.15);
 }
 
 .card h3{
@@ -95,46 +118,37 @@ body{
 }
 
 .price{
-    margin-top:15px;
+    margin-top:12px;
     color:#bfa46f;
-    font-size:24px;
+    font-size:22px;
 }
 
-/* ===== Filosofía ===== */
-.philosophy{
-    text-align:center;
-    max-width:700px;
-    margin:60px auto;
-    line-height:1.8;
-    color:#ddd;
+/* Desktop */
+@media(min-width:700px){
+    .grid{
+        grid-template-columns:repeat(3,1fr);
+    }
 }
 
-/* ===== Contacto ===== */
+/* Contacto */
 .info{
     text-align:center;
-    margin-top:60px;
     line-height:1.8;
 }
 
-/* ===== WhatsApp flotante ===== */
+/* WhatsApp flotante */
 .whatsapp{
     position:fixed;
-    bottom:25px;
-    right:20px;
+    bottom:20px;
+    right:15px;
     background:#25D366;
     color:#fff;
-    padding:16px 18px;
+    padding:14px 16px;
     border-radius:50px;
-    font-size:18px;
+    font-size:16px;
     text-decoration:none;
-    box-shadow:0 4px 12px rgba(0,0,0,0.4);
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
     z-index:999;
-}
-
-/* Animación */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(-10px);}
-    to{opacity:1; transform:translateY(0);}
 }
 </style>
 </head>
@@ -144,39 +158,48 @@ body{
 <!-- Banner -->
 <div class="banner">
     <img src="logo-concordia.png" class="logo">
-    <div class="lema">VIVE EN ARMONÍA</div>
+    <div class="lema">Vive en armonía</div>
 
-    <a class="cta"
-    href="https://wa.me/528342991603?text=Hola%20quiero%20reservar%20en%20Concordia%20Spa"
-    target="_blank">
-    RESERVAR
-    </a>
+    <div class="buttons">
+        <a class="btn dark"
+        href="https://wa.me/528342991603?text=Hola%20quiero%20reservar%20en%20Concordia"
+        target="_blank">
+        RESERVAR AHORA
+        </a>
+
+        <a class="btn light"
+        href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+Monterrey"
+        target="_blank">
+        CÓMO LLEGAR
+        </a>
+
+        <a class="btn light" href="#servicios">
+        SERVICIOS COMPLETOS
+        </a>
+    </div>
 </div>
 
-<!-- Filosofía corta (lujo emocional) -->
-<div class="philosophy">
-    Un santuario para equilibrar cuerpo, mente y energía.<br>
-    Experiencias diseñadas para restaurar tu bienestar y elevar tu vitalidad.
+<!-- Mensaje viral 2026 -->
+<div class="section">
+    <div class="editorial">
+        Bienestar de nueva generación.<br><br>
+
+        Biohacking • Neurowellness • Longevidad<br>
+        Restauración del sistema nervioso.<br>
+        Optimización de cuerpo, mente y energía.<br><br>
+
+        Un santuario diseñado para quienes buscan vivir más, mejor y en equilibrio.
+    </div>
 </div>
 
 <!-- Experiencias -->
-<div class="section">
+<div class="section" id="servicios">
     <div class="title">EXPERIENCIAS</div>
 
     <div class="grid">
 
         <div class="card">
-            <h3>Ritual Concordia</h3>
-            <div class="price">$1,299</div>
-        </div>
-
-        <div class="card">
-            <h3>Balance</h3>
-            <div class="price">$1,490</div>
-        </div>
-
-        <div class="card">
-            <h3>Neuro Wellness</h3>
+            <h3>Neuro Wellness Reset</h3>
             <div class="price">$2,222</div>
         </div>
 
@@ -186,17 +209,22 @@ body{
         </div>
 
         <div class="card">
-            <h3>Pilates Flow</h3>
-            <div class="price">$2,999</div>
+            <h3>Ritual Concordia</h3>
+            <div class="price">$1,299</div>
         </div>
 
         <div class="card">
-            <h3>Recovery</h3>
+            <h3>Full Body Recovery</h3>
             <div class="price">$4,900</div>
         </div>
 
         <div class="card">
-            <h3>GlowUp</h3>
+            <h3>Pilates & Energy Flow</h3>
+            <div class="price">$2,999</div>
+        </div>
+
+        <div class="card">
+            <h3>GlowUp Integral</h3>
             <div class="price">$5,900</div>
         </div>
 
@@ -205,19 +233,20 @@ body{
 
 <!-- Contacto -->
 <div class="section">
-    <div class="title">CONTACTO</div>
+    <div class="title">CONCORDIA</div>
 
     <div class="info">
-        Concordia Spa & Wellness<br>
+        Río Nazas 605, Privada Roma<br>
         Monterrey, Nuevo León<br><br>
+
         WhatsApp: 834 299 1603<br>
         contacto@concordiaspawellness.com
     </div>
 </div>
 
-<!-- Botón flotante -->
+<!-- WhatsApp flotante -->
 <a class="whatsapp"
-href="https://wa.me/528342991603?text=Hola%20quiero%20información%20de%20Concordia%20Spa"
+href="https://wa.me/528342991603?text=Hola%20quiero%20información%20de%20Concordia"
 target="_blank">
 WhatsApp
 </a>
