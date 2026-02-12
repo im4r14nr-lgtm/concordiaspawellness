@@ -11,11 +11,15 @@
 
 body{
 margin:0;
-background:black;
+background:#000;
 color:white;
 font-family:'Inter', sans-serif;
 overflow-x:hidden;
+background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03), transparent 40%);
 }
+
+/* HEADER */
 
 header{
 background:white;
@@ -24,15 +28,26 @@ text-align:center;
 }
 
 header img{
-width:220px;
+width:230px;
 }
 
+/* GOLD LINE */
+
+.gold-line{
+width:60px;
+height:2px;
+background:linear-gradient(to right, transparent, #d4af37, transparent);
+margin:30px auto;
+}
+
+/* SECTIONS */
+
 section{
-padding:120px 20px;
+padding:130px 20px;
 text-align:center;
 opacity:0;
-transform:translateY(40px);
-transition:all 1.2s ease;
+transform:translateY(60px);
+transition:all 1.4s ease;
 }
 
 section.show{
@@ -46,38 +61,55 @@ letter-spacing:3px;
 }
 
 h1{
-font-size:48px;
-margin-bottom:25px;
+font-size:52px;
+margin-bottom:20px;
 }
 
 h2{
-font-size:32px;
-margin-bottom:25px;
+font-size:34px;
+margin-bottom:20px;
 }
 
 p{
-max-width:750px;
+max-width:780px;
 margin:auto;
-line-height:1.8;
+line-height:1.9;
 opacity:0.85;
 font-size:18px;
 }
 
+/* BUTTONS */
+
 .buttons{
-margin-top:40px;
+margin-top:50px;
 }
 
 .btn{
 display:inline-block;
-margin:12px;
-padding:16px 45px;
+margin:15px;
+padding:18px 50px;
 border:1px solid white;
 color:white;
 text-decoration:none;
 letter-spacing:1px;
-transition:all 0.4s ease;
 position:relative;
 overflow:hidden;
+transition:all 0.4s ease;
+}
+
+.btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+transition:0.6s;
+}
+
+.btn:hover::before{
+left:100%;
 }
 
 .btn:hover{
@@ -85,9 +117,11 @@ background:white;
 color:black;
 }
 
+/* FOOTER */
+
 footer{
-padding:60px 20px;
-border-top:1px solid #1a1a1a;
+padding:70px 20px;
+border-top:1px solid rgba(255,255,255,0.1);
 text-align:center;
 opacity:0.6;
 font-size:14px;
@@ -105,6 +139,8 @@ font-size:14px;
 <section>
 <h1>VIVE EN ARMONÍA</h1>
 
+<div class="gold-line"></div>
+
 <p>
 Un santuario de biohacking, neuromeditación y longevidad avanzada.  
 Experiencias diseñadas para optimizar tu energía, equilibrio mental y bienestar integral.
@@ -115,10 +151,14 @@ Experiencias diseñadas para optimizar tu energía, equilibrio mental y bienesta
 <a class="btn" href="contacto.html">Enviar Mensaje</a>
 <a class="btn" href="suscripcion.html">Suscribirme</a>
 </div>
+
 </section>
 
 <section>
 <h2>Experiencias Transformadoras</h2>
+
+<div class="gold-line"></div>
+
 <p>
 Masajes corporales · Neurowellness · Sonidoterapia ·  
 Armonización energética · Aromaterapia · Hidroterapia ·  
@@ -132,10 +172,14 @@ target="_blank">
 Ver Menú Completo
 </a>
 </div>
+
 </section>
 
 <section>
 <h2>Ubicación</h2>
+
+<div class="gold-line"></div>
+
 <p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
 
 <div class="buttons">
@@ -145,6 +189,7 @@ target="_blank">
 Abrir en Google Maps
 </a>
 </div>
+
 </section>
 
 <footer>
@@ -158,7 +203,7 @@ const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {
 sections.forEach(section => {
 const position = section.getBoundingClientRect().top;
-const screenPosition = window.innerHeight / 1.3;
+const screenPosition = window.innerHeight / 1.2;
 
 if(position < screenPosition){
 section.classList.add("show");
