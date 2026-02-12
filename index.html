@@ -3,198 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concordia Spa & Wellness</title>
+<title>Concordia Spa & Wellness | Vive en Armonía</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+:root{
+  --gold:#C6A75E;
+  --black:#000000;
+  --white:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background:#000;
-    color:#fff;
-    text-align:center;
+  font-family:'Montserrat', sans-serif;
+  background-color:var(--black);
+  color:var(--white);
+  line-height:1.6;
 }
 
-/* Banner blanco superior */
-.header{
-    background:#fff;
-    height:33vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+h1,h2,h3{
+  font-family:'Cormorant Garamond', serif;
+  letter-spacing:1px;
 }
 
-.header img{
-    max-width:260px;
+header{
+  background:var(--white);
+  text-align:center;
+  padding:40px 20px;
 }
 
-/* Secciones */
-.section{
-    padding:60px 20px;
-    max-width:900px;
-    margin:auto;
+header img{
+  max-width:200px;
+}
+
+.tagline{
+  font-family:'Cormorant Garamond', serif;
+  font-size:24px;
+  color:var(--black);
+  margin-top:10px;
+  letter-spacing:2px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  margin-top:20px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:2px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:var(--gold);
+  color:var(--black);
+}
+
+section{
+  padding:80px 10%;
+  text-align:center;
+}
+
+.hero{
+  background:var(--black);
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:0 auto 30px;
+  font-weight:300;
 }
 
 .gold{
-    color:#c6a86a;
+  color:var(--gold);
 }
 
-h1{
-    font-weight:300;
-    letter-spacing:2px;
+.services{
+  text-align:left;
+  max-width:900px;
+  margin:auto;
 }
 
-h2{
-    margin-top:50px;
-    font-weight:300;
-    letter-spacing:1px;
-}
-
-/* Botones lujo */
-.btn{
-    display:inline-block;
-    margin:10px;
-    padding:14px 28px;
-    background:#c6a86a;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:4px;
-}
-
-.btn-outline{
-    background:transparent;
-    color:#c6a86a;
-    border:1px solid #c6a86a;
-}
-
-/* Cards paquetes */
-.package{
-    border:1px solid #333;
-    padding:25px;
-    margin:20px 0;
-    border-radius:8px;
-}
-
-/* Formulario */
-form{
-    max-width:500px;
-    margin:auto;
-}
-
-input, textarea{
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    border:none;
-    border-radius:4px;
-}
-
-textarea{
-    height:100px;
+.service{
+  margin-bottom:40px;
+  border-bottom:1px solid #222;
+  padding-bottom:30px;
 }
 
 footer{
-    margin-top:40px;
-    font-size:14px;
-    color:#888;
+  background:#111;
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+}
+
+a{
+  color:var(--gold);
+  text-decoration:none;
+}
+
+.map-btn{
+  margin-top:15px;
+  display:inline-block;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Banner blanco con logo -->
-<div class="header">
-    <img src="logo-concordia.png" alt="Concordia Spa & Wellness">
-</div>
+<header>
+  <img src="logo.png" alt="Concordia Spa & Wellness Logo">
+  <div class="tagline">VIVE EN ARMONÍA</div>
+  <a href="https://wa.me/528342991603" class="btn">RESERVA AHORA</a>
+</header>
 
-<!-- Hero -->
-<div class="section">
-    <h1 class="gold">Vive en armonía</h1>
-    <p>
-    Un santuario de longevidad, biohacking y neurowellness.<br>
-    Transformamos cuerpo, mente y energía con ciencia avanzada y tecnología de última generación.
-    </p>
+<section class="hero">
+  <h1>Concordia Spa & Wellness</h1>
+  <p>
+  Donde la ciencia avanzada, la energía y el lujo futurista se encuentran.
+  Biohacking, Neurowellness y tecnología facial con PDRN, péptidos y exosomas.
+  Diseñado para transformar cuerpo, mente y espíritu.
+  </p>
+  <a href="https://wa.me/528342991603" class="btn">AGENDAR POR WHATSAPP</a>
+  <br>
+  <a href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" class="btn map-btn">VER UBICACIÓN</a>
+</section>
 
-    <a class="btn" href="https://wa.me/528342991603" target="_blank">Reserva ahora</a>
-    <a class="btn-outline" href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey" target="_blank">Dirección</a>
-</div>
+<section>
+  <h2 class="gold">Nuestros Protocolos Premium</h2>
+  <div class="services">
 
-<!-- Filosofía -->
-<div class="section">
-<h2 class="gold">Experiencia Concordia</h2>
+    <div class="service">
+      <h3>BioHacking Longevity — $5,999</h3>
+      <p>
+      Masaje corporal, Facial BioTech con PDRN + Exosomas + Péptidos,
+      Hidroterapia, Berry Bowl funcional, Té especial, NeuroMeditación y
+      Armonización energética. Rejuvenecimiento celular profundo.
+      </p>
+    </div>
 
-<p>
-En Concordia creamos programas personalizados enfocados en bienestar integral y rendimiento óptimo.
-</p>
+    <div class="service">
+      <h3>NeuroWellness Reset — $2,222</h3>
+      <p>
+      Masaje terapéutico + NeuroMeditación guiada + Té funcional.
+      Regulación del sistema nervioso, mejora del sueño y reducción de ansiedad.
+      </p>
+    </div>
 
-<p>
-Nos especializamos en:
-</p>
+    <div class="service">
+      <h3>Ritual Concordia — $1,299</h3>
+      <p>
+      Masaje + Hidroterapia + Facial BioTech + Bebida funcional.
+      Equilibrio físico, mental y energético.
+      </p>
+    </div>
 
-<p>
-• Longevidad y biohacking<br>
-• Neurowellness y balance emocional<br>
-• Fitness y activación corporal<br>
-• Nutrición y bio-optimización<br>
-• Meditación guiada y sonidoterapia<br>
-• Aromaterapia y armonización energética<br>
-• Hidroterapia y recuperación profunda
-</p>
+    <div class="service">
+      <h3>GlowUp Experience — $5,900</h3>
+      <p>
+      12 clases de Pilates + Facial BioTech + Smoothie + Colágeno.
+      Transformación integral cuerpo y piel.
+      </p>
+    </div>
 
-<p>
-Faciales avanzados con péptidos, exosomas y PDRN: lo último en tecnología regenerativa.
-</p>
+    <div class="service">
+      <h3>Recovery Program — $4,900</h3>
+      <p>
+      2 Masajes + 2 Hidros + 2 Smoothies + proteína.
+      Ideal para alto rendimiento y recuperación muscular.
+      </p>
+    </div>
 
-<p>
-Protocolos basados en los avances científicos más eficaces para personas de 21 a 65 años que buscan verse, sentirse y rendir mejor.
-</p>
-</div>
+  </div>
+</section>
 
-<!-- Paquetes -->
-<div class="section">
-<h2 class="gold">Membresías</h2>
+<section>
+  <h2 class="gold">Wellness Bar</h2>
+  <p>
+  Smoothies funcionales, bowls nutritivos, infusiones, café premium y suplementos.
+  Energía sostenible y nutrición inteligente.
+  </p>
+</section>
 
-<div class="package">
-<h3>Semanal</h3>
-<p>
-• Fitness o Yoga diario<br>
-• Hidroterapia<br>
-• Bebidas funcionales<br>
-• Acceso a áreas wellness
-</p>
-</div>
+<section>
+  <h2 class="gold">Ubicación</h2>
+  <p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
+  <a href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" class="btn">CÓMO LLEGAR</a>
+</section>
 
-<div class="package">
-<h3>Mensual Max</h3>
-<p>
-• Todo lo anterior<br>
-• 3 sesiones de entrenamiento personalizado<br>
-• 1 masaje terapéutico<br>
-• 1 sesión de recuperación integral
-</p>
-</div>
+<section>
+  <h2 class="gold">Contacto</h2>
+  <p>
+  WhatsApp: <a href="https://wa.me/528342991603">834 299 1603</a><br>
+  Email: <a href="mailto:contacto@concordiaspawellness.com">contacto@concordiaspawellness.com</a>
+  </p>
+  <a href="https://wa.me/528342991603" class="btn">RESERVA AHORA</a>
+</section>
 
-<div class="package">
-<h3>Trimestral Pro</h3>
-<p>
-• Programación personalizada de bienestar<br>
-• Entrenamientos incluidos<br>
-• Masajes terapéuticos<br>
-• Hidroterapia ilimitada<br>
-• Evaluación de progreso
-</p>
-</div>
+<footer>
+  <p>Concordia Spa & Wellness</p>
+  <p class="gold">Vive en armonía</p>
+</footer>
 
-<div class="package">
-<h3>Anual Elite</h3>
-<p>
-• Plan integral de longevidad<br>
-• Biohacking y optimización continua<br>
-• Faciales regenerativos con PDRN y exosomas<br>
-• Masajes y recuperación avanzada<br>
-• Prioridad en agenda y beneficios exclusivos
-</p>
-</div>
-
-<a class="btn" href="https://wa.me/528342991603" target="_
+</body>
+</html>
