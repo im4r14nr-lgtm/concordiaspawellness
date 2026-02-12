@@ -8,16 +8,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body,html{
 font-family:'Inter', sans-serif;
-background:#000;
+background:black;
 color:white;
 overflow-x:hidden;
 }
 
-/* HEADER FIJO BLANCO */
+/* HEADER BLANCO ANGOSTO */
 header{
 position:fixed;
 top:0;
@@ -25,93 +29,89 @@ left:0;
 width:100%;
 background:white;
 text-align:center;
-padding:20px 0 10px 0;
+padding:12px 0 6px 0;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 header img{
-width:200px;
+width:170px;
 }
 
 .lema{
 font-family:'Playfair Display', serif;
-font-size:18px;
+font-size:14px;
 letter-spacing:4px;
 color:black;
-margin-top:8px;
+margin-top:4px;
 }
 
-/* HERO */
+/* HERO VIDEO */
 .hero{
-margin-top:140px; /* espacio para que no se empalme */
-height:85vh;
-background:url('https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+margin-top:90px;
+position:relative;
+height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
+overflow:hidden;
 }
 
-.hero::after{
-content:"";
+.hero video{
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.45);
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+z-index:1;
+filter:brightness(0.55) contrast(1.1) saturate(1.2);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-max-width:750px;
+max-width:900px;
 padding:20px;
 }
 
 .hero h1{
 font-family:'Playfair Display', serif;
-font-size:44px;
-letter-spacing:3px;
-margin-bottom:25px;
+font-size:60px;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:15px;
 }
 
-.hero p{
-line-height:1.8;
-font-size:18px;
-opacity:0.9;
+.subtitle{
+font-size:20px;
+letter-spacing:2px;
+opacity:0.95;
+margin-bottom:35px;
 }
 
 /* BOTONES */
-.buttons{
-margin-top:40px;
-}
-
 .btn{
-display:block;
-width:250px;
-margin:15px auto;
-padding:16px;
+display:inline-block;
+margin:10px;
+padding:16px 45px;
+border:1px solid white;
+color:white;
 text-decoration:none;
 letter-spacing:1px;
-transition:0.4s;
-font-size:15px;
+font-size:14px;
+transition:0.4s ease;
 }
 
 .btn-primary{
 background:white;
 color:black;
+font-weight:500;
 }
 
 .btn-primary:hover{
-background:#ddd;
-}
-
-.btn-outline{
-border:1px solid white;
-color:white;
+background:#eaeaea;
 }
 
 .btn-outline:hover{
@@ -119,61 +119,78 @@ background:white;
 color:black;
 }
 
+/* SECCIÓN SERVICIOS */
 section{
 padding:100px 20px;
 text-align:center;
+background:black;
 }
 
-h2{
+section h2{
 font-family:'Playfair Display', serif;
-font-size:32px;
-letter-spacing:2px;
-margin-bottom:20px;
+font-size:34px;
+letter-spacing:3px;
+margin-bottom:25px;
 }
 
+section p{
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+opacity:0.85;
+}
+
+/* FOOTER */
 footer{
 padding:60px 20px;
-border-top:1px solid #1a1a1a;
 text-align:center;
-opacity:0.6;
+border-top:1px solid rgba(255,255,255,0.1);
 font-size:14px;
+opacity:0.6;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="logo-concordia.png" alt="Concordia Logo">
+<img src="logo-concordia.png" alt="Concordia Spa Logo">
 <div class="lema">VIVE EN ARMONÍA</div>
 </header>
 
 <div class="hero">
-<div class="hero-content">
-<h1>Biohacking · Neuromeditación · Longevidad</h1>
-<p>
-Un santuario diseñado para elevar tu energía, equilibrio mental y bienestar integral.
-</p>
+<video autoplay muted loop playsinline>
+  <source src="https://cdn.coverr.co/videos/coverr-sunlight-through-flowing-water-6994/1080p.mp4" type="video/mp4">
+</video>
 
-<div class="buttons">
+<div class="hero-content">
+<h1>Biohacking de Longevidad</h1>
+<p class="subtitle">Reset total de cuerpo, mente y energía.</p>
+
 <a class="btn btn-primary" href="https://wa.me/528342991603" target="_blank">Reservar Ahora</a>
+
 <a class="btn btn-outline" href="contacto.html">Enviar Mensaje</a>
+
 <a class="btn btn-outline" href="suscripcion.html">Suscribirme</a>
-</div>
+
+<a class="btn btn-outline" href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" target="_blank">Ver Menú Completo</a>
+
 </div>
 </div>
 
 <section>
-<h2>Experiencias Transformadoras</h2>
+<h2>Experiencias de Bienestar Integral</h2>
 <p>
-Masajes corporales · Neurowellness · Sonidoterapia · Armonización energética ·
-Faciales avanzados · Nutrición funcional · Energy Boost.
+Biohacking · Neuromeditación · Longevidad avanzada · Masajes corporales ·
+Sonidoterapia · Armonización energética · Aromaterapia · Hidroterapia ·
+Faciales con péptidos, exosomas y PDRN · Nutrición funcional · Energy Boost ·
+Optimización de sueño · Manejo de estrés y ansiedad.
 </p>
 </section>
 
 <footer>
-<p>contacto@concordiaspawellness.com</p>
+<p>Contacto: contacto@concordiaspawellness.com</p>
 <p>© 2026 Concordia Spa & Wellness</p>
 </footer>
 
