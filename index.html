@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Concordia Spa & Wellness</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,55 +16,63 @@ box-sizing:border-box;
 
 body{
 font-family:'Montserrat', sans-serif;
-background:linear-gradient(to bottom,#f4f4f4,#e8e8e8,#f7f7f7);
+background:linear-gradient(to bottom,#f5f5f5,#eaeaea,#f8f8f8);
 color:#111;
 }
 
-/* HEADER */
+/* HEADER DELGADO */
 header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
 background:white;
+padding:5px 0 3px 0;
 text-align:center;
-padding:8px 0 4px 0;
-border-bottom:1px solid #ddd;
+border-bottom:1px solid #eee;
+z-index:1000;
 }
 
 header img{
-width:130px;
-margin-bottom:2px;
+width:115px;
+display:block;
+margin:0 auto;
 }
 
 header p{
-font-size:10px;
+font-size:9px;
 letter-spacing:4px;
-color:#000;
+color:black;
+margin-top:2px;
 }
 
 /* HERO */
 .hero{
 position:relative;
 height:100vh;
+margin-top:55px;
 overflow:hidden;
 }
 
+/* VIDEO CORREGIDO */
 .hero video{
 position:absolute;
-top:50%;
-left:50%;
-min-width:100%;
-min-height:100%;
-transform:translate(-50%,-50%);
+top:0;
+left:0;
+width:100%;
+height:100%;
 object-fit:cover;
 z-index:-2;
 }
 
-/* Overlay elegante */
+/* OVERLAY SUAVE */
 .overlay{
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(0,0,0,0.3));
+background:linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(0,0,0,0.25));
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -76,20 +84,28 @@ padding:20px;
 /* TITULO */
 .hero h1{
 font-family:'Playfair Display', serif;
-font-size:30px;
+font-size:26px;
+letter-spacing:2px;
 font-weight:500;
-letter-spacing:3px;
+max-width:700px;
 color:black;
 margin-bottom:20px;
-max-width:750px;
+}
+
+/* LINEA ORO */
+.gold-line{
+width:50px;
+height:2px;
+background:#c6a43c;
+margin:15px auto 25px auto;
 }
 
 /* BOTONES */
 .button{
 display:inline-block;
-padding:10px 30px;
+padding:8px 24px;
 margin:6px;
-font-size:12px;
+font-size:11px;
 letter-spacing:2px;
 text-decoration:none;
 background:black;
@@ -101,14 +117,6 @@ transition:0.3s;
 background:#333;
 }
 
-/* DETALLE ORO */
-.gold-line{
-width:60px;
-height:2px;
-background:#d4af37;
-margin:20px auto;
-}
-
 /* SERVICIOS */
 .services{
 background:linear-gradient(to bottom,#ffffff,#ececec);
@@ -118,7 +126,7 @@ text-align:center;
 
 .services h2{
 font-family:'Playfair Display', serif;
-font-size:22px;
+font-size:20px;
 letter-spacing:2px;
 margin-bottom:25px;
 }
@@ -126,7 +134,7 @@ margin-bottom:25px;
 .services p{
 max-width:900px;
 margin:auto;
-font-size:14px;
+font-size:13px;
 line-height:1.8;
 color:#333;
 }
@@ -134,11 +142,11 @@ color:#333;
 /* RESPONSIVE */
 @media(max-width:768px){
 .hero h1{
-font-size:22px;
+font-size:20px;
 }
 .button{
-padding:8px 20px;
-font-size:11px;
+padding:7px 18px;
+font-size:10px;
 }
 }
 </style>
@@ -152,11 +160,13 @@ font-size:11px;
 </header>
 
 <section class="hero">
-<video autoplay muted loop playsinline>
+
+<video autoplay muted loop playsinline preload="auto">
 <source src="hero.mp4" type="video/mp4">
 </video>
 
 <div class="overlay">
+
 <h1>Biohacking de longevidad para un reset total de cuerpo, mente y energía.</h1>
 
 <div class="gold-line"></div>
@@ -165,6 +175,8 @@ font-size:11px;
 <a href="contacto.html" class="button">ENVIAR MENSAJE</a>
 <a href="suscripcion.html" class="button">SUSCRIBIRME</a>
 <a href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view" target="_blank" class="button">VER MENÚ</a>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" target="_blank" class="button">UBICACIÓN</a>
 
 </div>
 </section>
