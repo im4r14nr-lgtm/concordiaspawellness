@@ -3,261 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concordia Spa & Wellness | Vive en Armonía</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Concordia Spa & Wellness</title>
 
 <style>
-
-:root{
-  --gold:#C6A75E;
-  --black:#000000;
-  --white:#ffffff;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
 body{
-  font-family:'Montserrat', sans-serif;
-  background: radial-gradient(circle at top, #111 0%, #000 70%);
-  color:var(--white);
-  overflow-x:hidden;
+margin:0;
+background:black;
+color:white;
+font-family:'Helvetica Neue', sans-serif;
+text-align:center;
 }
 
-h1,h2,h3{
-  font-family:'Cormorant Garamond', serif;
-  letter-spacing:2px;
-}
-
-/* HEADER BLANCO */
 header{
-  background:var(--white);
-  text-align:center;
-  padding:60px 20px 50px 20px;
+background:white;
+padding:25px 0;
 }
 
 header img{
-  max-width:260px;
+width:220px;
 }
 
-.tagline{
-  font-size:26px;
-  color:#000;
-  letter-spacing:4px;
-  margin-top:20px;
+.hero{
+padding:100px 20px 60px 20px;
+}
+
+h1{
+font-size:42px;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+p{
+max-width:750px;
+margin:auto;
+line-height:1.7;
+opacity:0.85;
+font-size:18px;
+}
+
+.buttons{
+margin-top:40px;
 }
 
 .btn{
-  display:inline-block;
-  padding:14px 38px;
-  margin-top:25px;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  text-decoration:none;
-  font-size:13px;
-  letter-spacing:3px;
-  transition:0.4s;
+display:inline-block;
+margin:12px;
+padding:15px 40px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+transition:0.3s;
+letter-spacing:1px;
 }
 
 .btn:hover{
-  background:var(--gold);
-  color:#000;
-  box-shadow:0 0 20px rgba(198,167,94,0.6);
+background:white;
+color:black;
 }
 
-/* HERO */
-.hero{
-  padding:120px 10%;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:52px;
-  margin-bottom:25px;
-}
-
-.hero p{
-  max-width:750px;
-  margin:0 auto 35px;
-  font-weight:300;
-  font-size:18px;
-  opacity:0.9;
-}
-
-.gold{
-  color:var(--gold);
-}
-
-section{
-  padding:100px 10%;
-  text-align:center;
-}
-
-/* SERVICES GRID */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:40px;
-  max-width:1000px;
-  margin:auto;
-}
-
-.service{
-  padding:40px;
-  border:1px solid rgba(198,167,94,0.25);
-  backdrop-filter:blur(10px);
-  background:rgba(255,255,255,0.03);
-  transition:0.4s;
-}
-
-.service:hover{
-  border-color:var(--gold);
-  box-shadow:0 0 25px rgba(198,167,94,0.2);
+.section{
+padding:70px 20px;
+border-top:1px solid #1a1a1a;
 }
 
 footer{
-  background:#0a0a0a;
-  text-align:center;
-  padding:50px 20px;
-  font-size:14px;
-  letter-spacing:2px;
+padding:40px 20px;
+border-top:1px solid #1a1a1a;
+font-size:14px;
+opacity:0.6;
 }
-
-/* WhatsApp Floating */
-.whatsapp-float{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:30px;
-  right:30px;
-  background-color:#25d366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 20px rgba(0,0,0,0.5);
-  z-index:1000;
-  transition:0.3s;
-}
-
-.whatsapp-float:hover{
-  transform:scale(1.1);
-}
-
-.whatsapp-float img{
-  width:32px;
-}
-
-@media(max-width:768px){
-  .hero h1{
-    font-size:38px;
-  }
-  section{
-    padding:70px 8%;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <img src="logo-concordia.png" alt="Concordia Spa & Wellness Logo">
-  <div class="tagline">VIVE EN ARMONÍA</div>
-  <a href="https://wa.me/528342991603" class="btn">RESERVA AHORA</a>
+<img src="logo-concordia.png" alt="Concordia Spa Logo">
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>Concordia <span class="gold">Spa & Wellness</span></h1>
-  <p>
-  Un santuario de lujo futurista donde la ciencia avanzada, la NeuroMeditación
-  y el Biohacking se integran para transformar cuerpo, mente y energía.
-  Tecnología facial con PDRN, péptidos y exosomas.
-  Bienestar integral basado en innovación real.
-  </p>
-  <a href="https://wa.me/528342991603" class="btn">AGENDAR EXPERIENCIA</a>
+<h1>VIVE EN ARMONÍA</h1>
+
+<p>
+Un santuario de biohacking y neuromeditación avanzada.  
+Tecnología de longevidad, wellness integral y experiencias diseñadas para equilibrar cuerpo, mente y energía.
+</p>
+
+<div class="buttons">
+<a class="btn" href="https://wa.me/528342991603" target="_blank">Reservar por WhatsApp</a>
+<a class="btn" href="contacto.html">Enviar Mensaje</a>
+<a class="btn" href="suscripcion.html">Suscribirme</a>
+</div>
+
 </section>
 
-<!-- SERVICIOS GENERALES -->
-<section>
-  <h2 class="gold">Experiencias & Protocolos</h2>
+<section class="section">
+<h2>Experiencias</h2>
+<p>
+Masajes corporales · Neurowellness · Sonidoterapia ·  
+Armonización energética · Aromaterapia · Hidroterapia ·  
+Faciales con péptidos, exosomas y PDRN · Nutrición funcional · Energy Boost.
+</p>
 
-  <div class="services">
+<br>
 
-    <div class="service">
-      <h3>Biohacking Longevity</h3>
-      <p>Protocolos avanzados para regeneración celular y rejuvenecimiento integral.</p>
-    </div>
+<a class="btn" 
+href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" 
+target="_blank">
+Ver Menú Completo
+</a>
 
-    <div class="service">
-      <h3>NeuroWellness & NeuroMeditación</h3>
-      <p>Regulación del sistema nervioso, reducción de ansiedad y optimización mental.</p>
-    </div>
-
-    <div class="service">
-      <h3>Faciales BioTech Avanzados</h3>
-      <p>PDRN, péptidos y exosomas para máxima calidad de piel.</p>
-    </div>
-
-    <div class="service">
-      <h3>Masajes Corporales & Hidroterapia</h3>
-      <p>Equilibrio profundo cuerpo-mente-energía.</p>
-    </div>
-
-    <div class="service">
-      <h3>Wellness Bar Funcional</h3>
-      <p>Smoothies verdes, bowls nutritivos y energía consciente.</p>
-    </div>
-
-    <div class="service">
-      <h3>Armonización Energética</h3>
-      <p>Sonidoterapia, aromaterapia y balance espiritual.</p>
-    </div>
-
-  </div>
-
-  <a href="https://www.canva.com/design/DAGIP37NWhM/YimIS7Xsb5qaXIDrgKwN8Q/view?utm_content=DAGIP37NWhM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hed9b0d16f9" 
-     class="btn" target="_blank">
-     VER MENÚ COMPLETO
-  </a>
 </section>
 
-<!-- UBICACIÓN -->
-<section>
-  <h2 class="gold">Ubicación</h2>
-  <p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
-  <a href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" class="btn">
-  CÓMO LLEGAR
-  </a>
-</section>
+<section class="section">
+<h2>Ubicación</h2>
+<p>Río Nazas 605, Privada Roma 64740, Monterrey, N.L.</p>
 
-<!-- CONTACTO -->
-<section>
-  <h2 class="gold">Contacto</h2>
-  <p>
-  WhatsApp: 834 299 1603<br>
-  contacto@concordiaspawellness.com
-  </p>
-  <a href="https://wa.me/528342991603" class="btn">RESERVA AHORA</a>
+<a class="btn" 
+href="https://maps.google.com/?q=Río+Nazas+605+Privada+Roma+64740+Monterrey+NL" 
+target="_blank">
+Abrir en Google Maps
+</a>
+
 </section>
 
 <footer>
-  Concordia Spa & Wellness<br>
-  <span class="gold">Vive en armonía</span>
+<p>Contacto: contacto@concordiaspawellness.com</p>
+<p>© 2026 Concordia Spa & Wellness</p>
 </footer>
-
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/528342991603" class="whatsapp-float" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
 
 </body>
 </html>
